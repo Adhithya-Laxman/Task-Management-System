@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+/* :root {
+    --primary-bg: #F4EFEA;   
+    --secondary-bg: #c9b3b3; 
+    --text-dark: #2E2E2E;  
+    --text-light: #5C5C5C;   
+    --accent-pink: #FFB3A7;  
+    --accent-purple: #A98A89; 
+    --accent-blue: #7CB2B0; 
+} */
+
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: "Poppins",sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-width: 100vh;
+    background: var(--primary-bg);
+    color: var(--text-light);
+
+}
+
+header{
+    padding: 2rem 1rem;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header h1{
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+
+#task-form{
+    display: flex;
+}
+
+input, button{
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+#task-input{
+    flex: 1 1 0%;
+    background-color: var(--secondary-bg);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-right: 1rem;
+    color: var(--text-dark);
+
+}
+
+#task-input::placeholder{
+    color: var(--text-light);
+}
+
+#task-submit {
+    color: transparent; /* Hide the original text color */
+    font-size: 1.25rem;
+    font-weight: 700;
+    background-image: linear-gradient(to right, #000000, #4b6e6d); /* Dark to accent color gradient */
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-color: #7C7C7C;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+#task-submit:hover{
+    opacity: 0.7;
+}
+
+#task-submit:active{
+    opacity: 0.6;
+}
+
+main{
+    flex: 1 1 0%;
+	max-width: 800px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.task-list{
+    padding: 1rem;
+}
+
+.task-list h2{
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+
+#tasks .task{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--secondary-bg);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+#tasks .task .content{
+    display: flex;
+}
+#tasks .task .content .text{
+    color: #000000;
+    font-size: 1.125rem;
+    width: 100%;
+    display: block;
+    transition: 0.4s;
+}
+
+#tasks .task .content .text:not(:read-only){
+    color: var(--accent-purple);
+
+}
+
+#tasks .task .actions{
+    display: flex;
+    /* flex-direction: row; */
+    margin: 0 -0.5rem;
+}
+
+
+
+.task .actions button{
+    cursor: pointer;
+    margin: 0 0.5rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.4s;
+}
+
+.task .actions button:hover{
+    opacity: 0.8;
+}
+
+.task .actions button:active{
+    opacity: 0.6;
+}
+
+.task .actions .edit{
+    background-image: linear-gradient(to right, #000000, #4b6e6d); /* Dark to accent color gradient */
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-color: #7C7C7C;
+    cursor: pointer;
+    transition: 0.4s;
+}
+.task .actions .delete {
+	color: crimson;
+}
+
+
+/* Add these styles to your existing CSS */
+
+/* Form container styles */
+header {
+    padding: 2rem 1rem;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#task-form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Task Name input */
+#task-name {
+    flex: 1;
+    background-color: var(--secondary-bg);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-right: 1rem;
+    color: var(--accent-purple);
+    border: none;
+    outline: none;
+}
+
+/* Task Description textarea */
+#task-description {
+    flex: 1;
+    background-color: var(--secondary-bg);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-right: 1rem;
+    color: var(--accent-purple);
+    border: none;
+    outline: none;
+    resize: none; /* Disable textarea resizing */
+}
+
+/* Due Date input */
+#due-date {
+    background-color: var(--secondary-bg);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-right: 1rem;
+    color: var(--accent-purple);
+    border: none;
+    outline: none;
+}
+
+/* Task Status select */
+#task-status {
+    background-color: var(--secondary-bg);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-right: 1rem;
+    color: var(--accent-purple);
+    border: none;
+    outline: none;
+}
+
+/* Task Submit button */
+#task-submit {
+    color: transparent; /* Hide the original text color */
+    font-size: 1.25rem;
+    font-weight: 700;
+    background-image: linear-gradient(to right, #000000, #4b6e6d); /* Dark to accent color gradient */
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-color: #7C7C7C;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+#task-submit:hover {
+    opacity: 0.7;
+}
+
+#task-submit:active {
+    opacity: 0.6;
+}
+
+
+
+/* Form container styles */
+header {
+    padding: 2rem 1rem;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#task-form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.new {
+    flex: 1;
+    display: flex;
+    /* flex-direction: column; */
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Task Name input */
+#task-name,
+#due-date,
+#task-status {
+    background-color: var(--secondary-bg);
+    padding: 1rem;
+    border-radius: 1rem;
+    color: var(--text-dark);
+    border: none;
+    outline: none;
+}
+
+
+/* Task Description textarea */
+#task-description {
+    background-color: var(--secondary-bg);
+    padding: 1rem;
+    border-radius: 1rem;
+    color: var(--accent-purple);
+    border: none;
+    outline: none;
+    resize: none; /* Disable textarea resizing */
+}
+
+/* Task Submit button */
+#task-submit {
+    color: transparent;
+    font-size: 1.25rem;
+    font-weight: 700;
+    background-image: linear-gradient(to right, #000000, #4b6e6d);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-color: #7C7C7C;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+#task-submit:hover {
+    opacity: 0.7;
+}
+
+#task-submit:active {
+    opacity: 0.6;
+}

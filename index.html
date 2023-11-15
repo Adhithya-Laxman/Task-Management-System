@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>User's Dashboard</h1>
+        <form action="post" id="task-form" >
+            <div class="new">
+                <input type="text" id="task-name" placeholder="Task Name" required>
+            </div>
+            <div class="new">
+                <input type="date" id="due-date" required>
+                <select id="task-status" required>
+                    <option value="To Do">To Do</option>
+                    <option value="In Progress">In Progress</option>
+                    <option value="Completed">Completed</option>
+                </select>
+            </div>
+            <div class="new">
+                <textarea id="task-description" placeholder="Task Description" required></textarea>
+            </div>
+            <input type="submit" id="task-submit" value="Add Task">
+        </form>
+    </header>
+
+    <main>
+
+        <section class="task-list">
+            <h2>Tasks List</h2>
+
+            <div id="tasks">
+                <div class="task">
+                    <div class="content">
+                        <input
+                            type="text"
+                            class="text"
+                            value="My Task"
+                            readonly
+                        >
+                    </div>
+                    <div class="actions">
+                        <button class="edit">View Details</buttton>
+                        <button class="edit">Edit</button>
+                        <button class="delete">Delete</button>
+                        
+                    </div>    
+                </div>
+                <div class="task">
+                    <div class="content">
+                        <input
+                            type="text"
+                            class="text"
+                            value="My Task"
+                            readonly
+                        >
+                    </div>
+                    <div class="actions">
+                        <button class="edit">View Details</buttton>
+                        <button class="edit">Edit</button>
+                        <button class="delete">Delete</button>
+                    </div>    
+                </div>
+                <div class="task">
+                    <div class="content">
+                        <input
+                            type="text"
+                            class="text"
+                            value="My Task"
+                            readonly
+                        >
+                    </div>
+                    <div class="actions">
+                        <button class="edit">View Details</buttton>
+                        <button class="edit">Edit</button>
+                        <button class="delete">Delete</button>
+                    </div>    
+                </div>
+                <div class="task">
+                    <div class="content">
+                        <input
+                            type="text"
+                            class="text"
+                            value="My Task"
+                            readonly
+                        >
+                    </div>
+                    <div class="actions">
+                        <button class="edit">View Details</buttton>
+                        <button class="edit">Edit</button>
+                        <button class="delete">Delete</button>
+                    </div>    
+                </div>
+            
+            </div>
+
+
+
+        </section>
+
+    </main>
+    
+</body>
+</html>

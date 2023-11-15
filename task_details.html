@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Details</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional styles for task details */
+        .task-details-container {
+            max-width: 800px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 1rem;
+            background-color: var(--secondary-bg);
+            border-radius: 1rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .task-detail {
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background-color: var(--primary-bg); /* Separate background color for each detail section */
+            border-radius: 1rem;
+        }
+
+        .task-detail-label {
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+
+        .task-detail-value {
+            font-size: 1rem;
+            color: var(--accent-purple);
+        }
+
+        .back-button {
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Task Details</h1>
+    </header>
+
+    <div class="task-details-container">
+        <div class="task-detail">
+            <p class="task-detail-label">Task Name:</p>
+            <p class="task-detail-value">The name or title of the task</p>
+        </div>
+
+        <div class="task-detail">
+            <p class="task-detail-label">Description:</p>
+            <p class="task-detail-value">Additional details or notes about the task</p>
+        </div>
+
+        <div class="task-detail">
+            <p class="task-detail-label">Due Date:</p>
+            <p class="task-detail-value">The deadline or due date for the task</p>
+        </div>
+
+        <div class="task-detail">
+            <p class="task-detail-label">Creation Date:</p>
+            <p class="task-detail-value">The date and time when the task was created</p>
+        </div>
+
+        <div class="task-detail">
+            <p class="task-detail-label">Status:</p>
+            <p class="task-detail-value">The status of the task (e.g., "To Do," "In Progress," "Completed")</p>
+        </div>
+    </div>
+
+    <footer>
+        <center><button class="back-button" id="task-submit" onclick="window.location.href='index.html'">>>Back to Task List</button></center>
+    </footer>
+</body>
+</html>
