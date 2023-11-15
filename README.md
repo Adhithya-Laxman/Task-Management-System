@@ -41,12 +41,5 @@ Update task:
 
 - HTML
 - CSS
-- JavaScript
+- PHP
 
-## Contributing
-
-Contributions are welcome! Please follow the [contribution guidelines](CONTRIBUTING.md).
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
